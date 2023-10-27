@@ -1,0 +1,245 @@
+\documentclass[9pt,landscape]{article}
+
+\usepackage{multicol}
+
+\input{format.tex} % formatting template
+
+\begin{document}
+
+\begin{multicols}{3}
+
+\columnseprule=0.25pt
+
+\section{符号}
+\begin{itemize}
+	\item 补集： $A'$
+	\item $P_n^r$：$_nP_r$
+	\item $\sigma^2$：$\text{Var}(X)$
+\end{itemize}
+
+\section{数数}
+
+\subsection{常见公式}
+
+\subsubsection{组合数}
+
+换系数：
+
+$$k \binom{n}{k} = n \binom{n-1}{k-1}$$
+
+组合数乘积：
+$$\binom{n}{r}\binom{r}{k} = \binom{n}{k}\binom{n-k}{r-k}$$
+
+$$\sum_{i=0}^m \binom{n}{i}\binom{m}{m-i} = \binom{m+n}{m}\ \ \ (n \geq m)$$
+
+$$\sum_{i=0}^n\binom{n}{i}^2=\binom{2n}{n}$$
+
+组合数的带权和：
+$$ \sum_{i=0}^ni\binom{n}{i}=n2^{n-1}$$
+$$ \sum_{i=0}^ni^2\binom{n}{i}=n(n+1)2^{n-2}$$
+
+杨辉三角列和：
+$$ \sum_{l=0}^n\binom{l}{k} = \binom{n+1}{k+1}$$
+
+组合数与斐波那契（Fibonacci）:
+$$ \sum_{i=0}^n\binom{n-i}{i}=F_{n+1}$$
+
+卡特兰数（Catalan Numbers）：
+$$H_n=\sum_{i=1}^nH_{i-1}H_{n-i}=\frac{\binom{2n}{n}}{n+1}=\binom{2n}{n}-\binom{2n}{n-1}$$
+
+\subsubsection{常见求和公式}
+
+\begin{equation*}
+	\sum_{k=1}^{n}k^2=\frac{1}{6}n(n+1)(2n+1)
+\end{equation*}
+\begin{equation*}
+	\sum_{k=1}^{n}k^3=\frac{1}{4}n^2(n+1)^2
+\end{equation*}
+\begin{equation*}
+	\sum_{k=0}^{n-1}r^k=\frac{1-r^n}{1-r}, r\neq 1
+\end{equation*}
+\begin{equation*}
+	\sum_{k=1}^{n}kr^k=r\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}, r\neq 1
+\end{equation*}
+
+\subsubsection{Maclaurin Series}
+
+\begin{equation*}
+	e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+\end{equation*}
+\begin{equation*}
+	\sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots
+\end{equation*}
+\begin{equation*}
+	\cos(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
+\end{equation*}
+\begin{equation*}
+	\ln(x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}(x-1)^n = (x-1) - \frac{(x-1)^2}{2} - \cdots
+\end{equation*}
+\begin{equation*}
+	\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots
+\end{equation*}
+
+\subsection{常见题}
+
+隔板法：$\sum_{i=1}^{k} x_i=n$
+\begin{itemize}
+	\item $x_i>0$: $\binom{n-1}{k-1}$
+	\item $x_i\ge 0$: $\binom{n+k-1}{k-1}$
+\end{itemize}
+
+错位排列：$D_n=(n-1)\left(D_{n-1}+D_{n-2}\right)$
+
+\section{Basic Probability}
+
+\subsection{Bayes’ Rule}
+\begin{equation*}
+	\mathbb{P}\mathrm{r}(B\mid A)\cdot\mathbb{P}\mathrm{r}(A)=\mathbb{P}\mathrm{r}(A\mid B)\cdot\mathbb{P}\mathrm{r}(B)
+\end{equation*}
+\begin{equation*}
+	\mathbb{P}\mathrm{r}(B_i\mid A)=\frac{\mathbb{P}\mathrm{r}(A\mid B_i)\cdot \mathbb{P}\mathrm{r}(B_i)}{\sum_j\mathbb{P}\mathrm{r}(A\mid B_j)\cdot \mathbb{P}\mathrm{r}(B_j)}
+\end{equation*}
+
+\subsection{PMF}
+
+Probability Mass Function，又名 Frequency Function：
+\begin{equation*}
+	p(x_i)=\mathbb{P}\mathrm{r}\left\{X=x_i\right\}
+\end{equation*}
+
+\subsection{CDF}
+Cumulative Distribution Function
+\begin{equation*}
+	F(x)=\mathbb{P}\mathrm{r}\left\{X\le x\right\}
+\end{equation*}
+
+\subsection{Expectation}
+
+存在条件（联想到绝对收敛）：
+\begin{equation*}
+	\sum_{i}\left|x_i\right|p(x_i)<\infty
+\end{equation*}
+
+\section{Distribution}
+
+\subsection{Bernoulli Random Variable}
+\begin{itemize}
+	\item 概率：$p(1)=p, p(0)=1-p$
+	\item 性质：$\mathbb{E}(X)=p,\text{Var}(X)=p(1-p)$
+\end{itemize}
+\subsection{Binomial Distribution}
+\begin{itemize}
+	\item 记号：$X\sim \mathrm{Bin}(n,p)$
+	\item 概率：$p(i)=\binom{n}{i}p^i(1-p)^{n-i}$
+	\item 性质：$\mathbb{E}(X)=np,\text{Var}(X)=np(1-p)$
+\end{itemize}
+
+\subsection{Poisson Distribution}
+
+记号：$X \sim \text{Poisson}(\lambda)$
+\begin{equation*}
+	p(k)=\frac{\lambda^k}{k!}e^{-\lambda}
+\end{equation*}
+本质上是一个$n\to\infty$的二项分布，$\lambda=np$。
+\begin{equation*}
+	\mathbb{E}(X)=\lambda,\text{Var}(X)=\lambda
+\end{equation*}
+所以 $\lambda$ 也就是无数次独立实验的期望。一般是先知道期望，又由于有无数次独立实验，然后求 $p$。
+
+\section{单词表}
+
+\subsection{纸牌}
+
+\subsubsection{花色}
+
+\begin{itemize}
+	\item Suit - 花色
+	\item Hearts - 红桃
+	\item Diamonds - 方块
+	\item Clubs - 梅花
+	\item Spades - 黑桃
+\end{itemize}
+
+\subsubsection{特殊牌型}
+
+\begin{itemize}
+	\item Ace - A牌
+	\item King - K牌
+	\item Queen - Q牌
+	\item Jack - J牌
+	\item Joker - 王牌
+	\item Pip - 小牌（指2到10的牌）
+	\item Face card - K、Q、J
+\end{itemize}
+
+\subsubsection{组合牌}
+\begin{itemize}
+	\item Flush - 同花（五张同一花色的牌）
+	\item Straight - 顺子（五张连续大小的牌）
+	\item Full house - 葫芦（三张一样和两张一样的牌）
+	\item Pair - 对子
+\end{itemize}
+
+\subsubsection{其他}
+
+\begin{itemize}
+	\item Deck of cards - 一副纸牌
+	\item Rank - 牌面大小
+	\item Deal - 发牌
+	\item Hand - 手牌
+	\item Draw - 抽牌
+	\item Discard - 弃牌
+	\item Flip - 翻牌
+	\item Cut the deck - 切牌
+	\item Odds - 赔率
+\end{itemize}
+
+\subsection{赌博}
+
+\begin{itemize}
+	\item Bet - 赌注
+	\item Casino - 赌场
+	\item Slot machine - 老虎机
+	\item Roulette - 轮盘赌
+	\item Blackjack - 二十一点
+	\item Craps - 赌场骰子游戏
+\end{itemize}
+
+\subsection{保险}
+
+\begin{itemize}
+	\item Premium - 保险费
+	\item Policyholder - 保单持有人
+	\item Coverage - 保险覆盖范围
+	\item Deductible - 免赔额
+	\item Claim - 理赔
+\end{itemize}
+
+\subsection{股票}
+
+\begin{itemize}
+	\item Stock - 股票
+	\item Share - 股份
+	\item Dividend - 股息
+	\item Stock price - 股价
+	\item Stock exchange - 股票交易所
+\end{itemize}
+
+\subsection{国际象棋}
+\begin{itemize}
+	\item Pawn - 兵
+	\item Rook - 车
+	\item Knight - 马
+	\item Bishop - 象
+	\item Queen - 后
+	\item King - 王
+	\item Check - 将军
+	\item Checkmate - 将死
+	\item Castling - 王车易位
+	\item En passant - 吃过路兵
+	\item Stalemate - 和棋
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
