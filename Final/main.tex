@@ -1,0 +1,398 @@
+\documentclass[9pt,landscape]{article}
+
+\usepackage{multicol}
+
+\input{format.tex} % formatting template
+
+\begin{document}
+
+\begin{multicols}{3}
+
+\columnseprule=0.25pt
+
+\section{公式}
+
+\subsubsection{组合数}
+
+换系数：
+
+$k \binom{n}{k} = n \binom{n-1}{k-1}$
+
+组合数乘积：
+
+$\binom{n}{r}\binom{r}{k} = \binom{n}{k}\binom{n-k}{r-k}$
+
+$\sum_{i=0}^m \binom{n}{i}\binom{m}{m-i} = \binom{m+n}{m}\ \ \ (n \geq m)$
+
+$\sum_{i=0}^n\binom{n}{i}^2=\binom{2n}{n}$
+
+组合数的带权和：
+
+$ \sum_{i=0}^ni\binom{n}{i}=n2^{n-1}$
+
+$ \sum_{i=0}^ni^2\binom{n}{i}=n(n+1)2^{n-2}$
+
+杨辉三角列和：
+$ \sum_{l=0}^n\binom{l}{k} = \binom{n+1}{k+1}$
+
+组合数与斐波那契（Fibonacci）:
+
+$ \sum_{i=0}^n\binom{n-i}{i}=F_{n+1}$
+
+卡特兰数（Catalan Numbers）：
+
+$H_n=\sum_{i=1}^nH_{i-1}H_{n-i}=\frac{\binom{2n}{n}}{n+1}=\binom{2n}{n}-\binom{2n}{n-1}$
+
+\subsection{求和}
+
+$\sum_{k=1}^{n}k^2=\frac{1}{6}n(n+1)(2n+1)$
+
+$\sum_{k=1}^{n}k^3=\frac{1}{4}n^2(n+1)^2$
+
+$\sum_{k=0}^{n-1}r^k=\frac{1-r^n}{1-r}, r\neq 1$
+
+$\sum_{k=1}^{n}kr^k=r\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}, r\neq 1$
+
+\subsection{Maclaurin Series}
+
+$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$
+
+$\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$
+
+$\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$
+
+$\ln x = \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}(x-1)^n = (x-1) - \frac{(x-1)^2}{2} - \cdots$
+
+$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \cdots$
+
+\subsection{数数}
+
+隔板法：$\sum_{i=1}^{k} x_i=n$
+\begin{itemize}
+	\item $x_i>0$: $\binom{n-1}{k-1}$
+	\item $x_i\ge 0$: $\binom{n+k-1}{k-1}$
+\end{itemize}
+
+错位排列：$D_n=(n-1)\left(D_{n-1}+D_{n-2}\right)$
+
+\subsection{常见导数公式}
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\tan x=\sec ^{2}x$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\cot x=-\csc ^{2}x$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\sec x=\sec x\tan x$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\csc x=-\csc x\cot x$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\arcsin x={\frac {1}{\sqrt {1-x^{2}}}}$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\arccos x=-{\frac {1}{\sqrt {1-x^{2}}}}$
+
+$\frac{\mathrm{d}}{\mathrm{d}x}\arctan x={\frac {1}{1+x^{2}}}$
+
+\subsection{常见积分公式（都省略 $+C$）}
+
+$ \int {\frac {1}{x^{2}+\alpha ^{2}}}{\mbox{d}}x={\frac {\arctan {\frac {x}{\alpha }}}{\alpha }} $
+
+$ \int {\frac {1}{\pm x^{2}\mp \alpha ^{2}}}{\mbox{d}}x={\frac {\ln \left({\frac {x\mp \alpha }{\pm x+\alpha }}\right)}{2\alpha }} $
+
+$ \int {\frac {1}{ax^{2}+b}}{\mbox{d}}x={\frac {1}{\sqrt {ab}}}\arctan {\frac {{\sqrt {a}}x}{\sqrt {b}}} $
+
+$ \int {\sqrt {a^{2}+x^{2}}}{\mbox{d}}x={\frac {1}{2}}x{\sqrt {a^{2}+x^{2}}}+{\frac {1}{2}}a^{2}\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right) $
+
+$ \int {\frac {\sqrt {a^{2}+x^{2}}}{x}}{\mbox{d}}x={\sqrt {a^{2}+x^{2}}}-a\ln \left({\frac {a+{\sqrt {a^{2}+x^{2}}}}{x}}\right) $
+
+$ \int {\frac {\sqrt {a^{2}+x^{2}}}{x^{2}}}{\mbox{d}}x=\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right)-{\frac {\sqrt {a^{2}+x^{2}}}{x}} $
+
+$ \int {\frac {1}{\sqrt {a^{2}+x^{2}}}}{\mbox{d}}x=\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right) $
+
+$ \int {\frac {1}{\sqrt {x^{2}-a^{2}}}}{\mbox{d}}x=\ln|x+{\sqrt {x^{2}-a^{2}}}| $
+
+$ \int {\sqrt {a^{2}-x^{2}}}{\mbox{d}}x={\frac {1}{2}}x{\sqrt {a^{2}-x^{2}}}+{\frac {a^{2}}{2}}\arcsin {\frac {x}{a}} $
+
+$ \int {\frac {1}{\sqrt {a^{2}-x^{2}}}}{\mbox{d}}x=\arcsin {\frac {x}{a}}=-\arccos {\frac {x}{a}} $
+
+$ \int \cos x{\mbox{d}}x=\sin x $
+
+$ \int \sin x{\mbox{d}}x=-\cos x $
+
+$ \int \sec ^{2}x{\mbox{d}}x=\tan x $
+
+$ \int \csc ^{2}x{\mbox{d}}x=-\cot x $
+
+$ \int \sec x\tan x{\mbox{d}}x=\sec x $
+
+$ \int \csc x\cot x{\mbox{d}}x=-\csc x $
+
+$ \int \tan x{\mbox{d}}x=-\ln {\left|\cos {x}\right|}=\ln {\left|\sec x\right|} $
+
+$ \int \cot x{\mbox{d}}x=\ln {\left|\sin x\right|} $
+
+$ \int \sec x{\mbox{d}}x=\ln {\left|\sec x+\tan x\right|} $
+
+$ \int \csc x{\mbox{d}}x=\ln {\left|\csc x-\cot x\right|}=\ln {\left|{\tan x-\sin x \over \sin x\tan x}\right|} $
+
+$ \int \sin ^{n}x{\mbox{d}}x=-{\frac {1}{n}}\sin ^{n-1}x\cos x+{\frac {n-1}{n}}\int \sin ^{n-2}x{\mbox{d}}x\quad $
+
+$ \int \sin ^{2}x{\mbox{d}}x={\frac {x}{2}}-{\frac {\sin {2x}}{4}} $
+
+$ \int \cos ^{n}x{\mbox{d}}x={\frac {1}{n}}\cos ^{n-1}x\sin x+{\frac {n-1}{n}}\int \cos ^{n-2}x{\mbox{d}}x\quad $
+
+$ \int \cos ^{2}x{\mbox{d}}x={\frac {x}{2}}+{\frac {\sin {2x}}{4}} $
+
+$ \int \tan ^{n}x{\mbox{d}}x={\frac {1}{n-1}}\tan ^{n-1}x-\int \tan ^{n-2}x{\mbox{d}}x\quad $
+
+$ \int \tan ^{2}x{\mbox{d}}x=\tan x-x $
+
+$ \int xe^{ax}{\mbox{d}}x={\frac {1}{a^{2}}}(ax-1)e^{ax} $
+
+$ \int x^{n}e^{ax}{\mbox{d}}x={\frac {1}{a}}x^{n}e^{ax}-{\frac {n}{a}}\int x^{n-1}e^{ax}{\mbox{d}}x $
+
+$ \int e^{ax}\sin bx{\mbox{d}}x={\frac {e^{ax}}{a^{2}+b^{2}}}(a\sin bx-b\cos bx) $
+
+$ \int e^{ax}\cos bx{\mbox{d}}x={\frac {e^{ax}}{a^{2}+b^{2}}}(a\cos bx+b\sin bx) $
+
+$ \int x^{n}\ln x{\mbox{d}}x={\frac {x^{n+1}}{(n+1)^{2}}}[(n+1)\ln x-1] $
+
+$ \int {\frac {1}{x\ln {x}}}{\mbox{d}}x=\ln {(\ln {x})} $
+
+$ \int _{-\infty }^{\infty }e^{-ax^{2}+bx+c}\,\mathrm{d}x={\sqrt {\frac {\pi }{a}}}\,e^{{\frac {b^{2}}{4a}}+c} $
+
+$ \iint \limits _{D}\left({\frac {\partial Q}{\partial x}}-{\frac {\partial P}{\partial y}}\right)\mathrm {d} x\mathrm {d} y=\oint _{L^{+}}(P\mathrm {d} x+Q\mathrm {d} y) $
+
+\section{Distribution}
+
+\subsection{Bernoulli Random Variable}
+
+概率：$p(1)=p, p(0)=1-p$
+
+性质：$\mathbb{E}(X)=p,\text{Var}(X)=p(1-p)$
+
+\subsection{Binomial Distribution}
+记号：$X\sim \mathrm{Bin}(n,p)$
+
+概率：$p(i)=\binom{n}{i}p^i(1-p)^{n-i}$
+
+性质：$\mathbb{E}(X)=np,\text{Var}(X)=np(1-p)$
+
+\subsection{Poisson Distribution}
+
+记号：$X \sim \text{Poisson}(\lambda)$
+
+概率：$p(k)=\frac{\lambda^k}{k!}e^{-\lambda}$
+
+本质上是一个$n\to\infty$的二项分布，$\lambda=np$。
+
+性质：$\mathbb{E}(X)=\lambda,\text{Var}(X)=\lambda$
+
+Approximate Bin: $n$ large, $p$ small ($n \ge 50, np \le 5$)
+
+\subsection{Hypergeometric Distribution}
+
+记号：$X \sim \text{Hypergeomet}(n, N, m)$
+
+概率：$p(k)=\frac{\binom{m}{k}\binom{N-m}{n-k}}{\binom{N}{n}}$
+
+$N$ 个球，$m$ 个红球，不放回取出 $n$ 个，有 $k$ 红球。
+
+性质：$\mathbb{E}(X)=n\cdot\frac{m}{N}, \mathrm{Var}(X)=n\cdot \frac{m}{N}\left(1-\frac{m}{N}\right)\left(1-\frac{n-1}{N-1}\right)$
+
+\subsection{Uniform Distribution}
+
+记号：$X \sim \mathrm{Unif}(l, r)$
+
+PDF：$f(x)=\frac{1}{r-l}$
+
+CDF：$f(x)=\frac{x-l}{r-l}$
+
+\subsection{Normal Distribution}
+
+记号：$X \sim N\left(\mu, \sigma^2\right)$
+
+PDF：$f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^2}{2\sigma^2}}$
+
+$\Phi(x)=\text{CDF of $N(0, 1)$}$
+
+To $N(0, 1)$: $Z = \frac{X - \mu}{\sigma}$
+
+Approximate Bin: $np(1-p)\ge 10$
+
+$Z\sim N(0, 1), \mathbb{E}(g'(Z))=\mathbb{E}(Zg(Z))$,  assuming that $\lim_{x\to \infty}\frac{g(x)}{e^{\frac{x^2}{2}}}=0$. So $\mathbb{E}(Z^{n+1})=n\mathbb{E}(Z^{n-1})$.
+
+\subsection{Exponential Distribution}
+
+$X\sim \mathrm{Exp}(\lambda)$
+
+PDF：$f(x)=\lambda e^{-\lambda x}, x\ge 0$
+
+CDF：$F(X)=1-e^{-\lambda x}, x\ge 0$
+
+$\mathbb{P}r(X>x)=e^{-\lambda x}, x\ge 0$
+
+$\mathbb{E}(X^n)=\frac{n}{\lambda}\mathbb{E}(X^{n-1})=\frac{n!}{\lambda^n}$
+
+$\mathbb{E}(X)=\frac{1}{\lambda}, \mathrm{Var}(X)=\frac{1}{\lambda^2}$
+
+\subsection{Gamma Distribution}
+
+$X\sim \Gamma(\alpha, \lambda)$ or $X\sim \mathrm{Gamma}(\alpha, \lambda)$
+
+$\Gamma(x)=\int_{0}^{\infty}u^{x-1}e^{-u}\mathrm{d}u, x>0$
+
+$\Gamma(x)=(x-1)\Gamma(x - 1)$
+
+$\Gamma(n)=(n-1)!$
+
+PDF：$f(x)=\frac{\lambda^\alpha}{\Gamma(a)}x^{\alpha - 1}e^{-\lambda x}, x>0$
+
+$\alpha$：发生次数
+
+$\mathbb{E}(X)=\frac{\alpha}{\lambda}, \mathrm{Var}(X)=\frac{\alpha}{\lambda^2}$
+
+$\mathbb{E}(X^n)=\frac{n+\alpha-1}{\lambda}\mathbb{E}(X^{n-1})=\frac{\alpha^{\overline{n}}}{\lambda^n}$
+
+\subsection{Chi-Squared Distribution}
+
+$X\sim \chi^2(k)$
+
+PDF：$f(x)=\frac{1}{2^{\frac{k}{2}}\Gamma\left(\frac{k}{2}\right)}x^{\frac{k}{2}-1}e^{-\frac{x}{2}}$
+
+$k$（自由度）个 $N(0, 1)$所组成向量长度平方的分布。
+
+$\mathbb{E}(X)=k$
+
+\section{Functions of a Random Variable}
+$Y=g(x)$, $g(x)$ increasing,
+
+$f_Y(y)=\begin{cases}
+	f_X\left(g^{-1}(y)\right)\cdot\left(\frac{\mathrm{d}}{\mathrm{d}y}g^{-1}(y)\right) & \exists x, y=g(x)\\
+	0 & \forall x, y\neq g(x)
+\end{cases}$
+
+\section{Joint Distribution}
+
+\subsection{Marginal CDF/PDF}
+$F_X(x)=\lim_{y\to +\infty}F(x, y)$
+
+$f_X(x)=\int_{-\infty}^{+\infty}f(x, y)\mathrm{d}y$
+
+\subsection{Independence}
+
+$\mathbb{P}r\{X\in A, Y\in B\}=\mathbb{P}r\{X\in A\}\cdot\mathbb{P}r\{Y\in B\}$
+
+$\mathbb{P}r\left\{X_1 \in A_1, \ldots, X_n \in A_n\right\} = \prod \mathbb{P}r\{X_i \in A_i\}$
+
+$f_{XY}(x, y)=f_X(x)\cdot f_Y(y)$
+
+$F_{XY}(x, y)=F_X(x)\cdot F_Y(y)$
+
+\subsection{Sum of Random Variables}
+
+$X, Y$ independent, $Z=X+Y$
+
+$f_Z(z)=\int_{-\infty}^{+\infty}f_X(x)f_Y(z-x)\mathrm{d}x$
+
+convolution
+
+$X\sim \Gamma(\alpha, \lambda), Y\sim \Gamma(\beta, \lambda)\to X+Y\sim\Gamma(\alpha+\beta, \lambda)$
+
+$X\sim N(\mu_1,\sigma_1^2), Y\sim N(\mu_2,\sigma_2^2)\to X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$
+
+%\section{单词表}
+%
+%\subsection{纸牌}
+%
+%\subsubsection{花色}
+%
+%\begin{itemize}
+%	\item Suit - 花色
+%	\item Hearts - 红桃
+%	\item Diamonds - 方块
+%	\item Clubs - 梅花
+%	\item Spades - 黑桃
+%\end{itemize}
+%
+%\subsubsection{特殊牌型}
+%
+%\begin{itemize}
+%	\item Ace - A牌
+%	\item King - K牌
+%	\item Queen - Q牌
+%	\item Jack - J牌
+%	\item Joker - 王牌
+%	\item Pip - 小牌（指2到10的牌）
+%	\item Face card - K、Q、J
+%\end{itemize}
+%
+%\subsubsection{组合牌}
+%\begin{itemize}
+%	\item Flush - 同花（五张同一花色的牌）
+%	\item Straight - 顺子（五张连续大小的牌）
+%	\item Full house - 葫芦（三张一样和两张一样的牌）
+%	\item Pair - 对子
+%\end{itemize}
+%
+%\subsubsection{其他}
+%
+%\begin{itemize}
+%	\item Deck of cards - 一副纸牌
+%	\item Rank - 牌面大小
+%	\item Deal - 发牌
+%	\item Hand - 手牌
+%	\item Draw - 抽牌
+%	\item Discard - 弃牌
+%	\item Flip - 翻牌
+%	\item Cut the deck - 切牌
+%	\item Odds - 赔率
+%\end{itemize}
+%
+%\subsection{赌博}
+%
+%\begin{itemize}
+%	\item Bet - 赌注
+%	\item Casino - 赌场
+%	\item Slot machine - 老虎机
+%	\item Roulette - 轮盘赌
+%	\item Blackjack - 二十一点
+%	\item Craps - 赌场骰子游戏
+%\end{itemize}
+%
+%\subsection{保险}
+%
+%\begin{itemize}
+%	\item Premium - 保险费
+%	\item Policyholder - 保单持有人
+%	\item Coverage - 保险覆盖范围
+%	\item Deductible - 免赔额
+%	\item Claim - 理赔
+%\end{itemize}
+%
+%\subsection{股票}
+%
+%\begin{itemize}
+%	\item Stock - 股票
+%	\item Share - 股份
+%	\item Dividend - 股息
+%	\item Stock price - 股价
+%	\item Stock exchange - 股票交易所
+%\end{itemize}
+%
+%\subsection{国际象棋}
+%\begin{itemize}
+%	\item Pawn - 兵
+%	\item Rook - 车
+%	\item Knight - 马
+%	\item Bishop - 象
+%	\item Queen - 后
+%	\item King - 王
+%	\item Check - 将军
+%	\item Checkmate - 将死
+%	\item Castling - 王车易位
+%	\item En passant - 吃过路兵
+%	\item Stalemate - 和棋
+%\end{itemize}
+
+\end{multicols}
+
+\end{document}
