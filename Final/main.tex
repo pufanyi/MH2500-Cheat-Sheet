@@ -10,9 +10,19 @@
 
 \columnseprule=0.25pt
 
+\section{符号}
+
+补集： $A'$
+
+$P_n^r$：$_nP_r$
+
+$\sigma^2$：$\text{Var}(X)=\mathbb{E}[x^2]-\left[\mathbb{E}[x]\right]^2$
+
+$[\mathrm{statement}]$：$\mathbf{1}_{\{\mathrm{statement}\}}$
+
 \section{公式}
 
-\subsubsection{组合数}
+\subsection{组合数}
 
 换系数：
 
@@ -91,7 +101,9 @@ $\frac{\mathrm{d}}{\mathrm{d}x}\arccos x=-{\frac {1}{\sqrt {1-x^{2}}}}$
 
 $\frac{\mathrm{d}}{\mathrm{d}x}\arctan x={\frac {1}{1+x^{2}}}$
 
-\subsection{常见积分公式（都省略 $+C$）}
+$z=f(x,y), \frac{\mathrm{d}z}{\mathrm{d}t}=\frac{\partial z}{\partial x}\cdot\frac{\mathrm{d}x}{\mathrm{d}t}+\frac{\partial z}{\partial y}\cdot\frac{\mathrm{d}y}{\mathrm{d}t}$
+
+\subsection{积分（省略 $+C$）}
 
 $ \int {\frac {1}{x^{2}+\alpha ^{2}}}{\mbox{d}}x={\frac {\arctan {\frac {x}{\alpha }}}{\alpha }} $
 
@@ -99,23 +111,7 @@ $ \int {\frac {1}{\pm x^{2}\mp \alpha ^{2}}}{\mbox{d}}x={\frac {\ln \left({\frac
 
 $ \int {\frac {1}{ax^{2}+b}}{\mbox{d}}x={\frac {1}{\sqrt {ab}}}\arctan {\frac {{\sqrt {a}}x}{\sqrt {b}}} $
 
-$ \int {\sqrt {a^{2}+x^{2}}}{\mbox{d}}x={\frac {1}{2}}x{\sqrt {a^{2}+x^{2}}}+{\frac {1}{2}}a^{2}\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right) $
-
-$ \int {\frac {\sqrt {a^{2}+x^{2}}}{x}}{\mbox{d}}x={\sqrt {a^{2}+x^{2}}}-a\ln \left({\frac {a+{\sqrt {a^{2}+x^{2}}}}{x}}\right) $
-
-$ \int {\frac {\sqrt {a^{2}+x^{2}}}{x^{2}}}{\mbox{d}}x=\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right)-{\frac {\sqrt {a^{2}+x^{2}}}{x}} $
-
-$ \int {\frac {1}{\sqrt {a^{2}+x^{2}}}}{\mbox{d}}x=\ln \left(x+{\sqrt {a^{2}+x^{2}}}\right) $
-
-$ \int {\frac {1}{\sqrt {x^{2}-a^{2}}}}{\mbox{d}}x=\ln|x+{\sqrt {x^{2}-a^{2}}}| $
-
-$ \int {\sqrt {a^{2}-x^{2}}}{\mbox{d}}x={\frac {1}{2}}x{\sqrt {a^{2}-x^{2}}}+{\frac {a^{2}}{2}}\arcsin {\frac {x}{a}} $
-
 $ \int {\frac {1}{\sqrt {a^{2}-x^{2}}}}{\mbox{d}}x=\arcsin {\frac {x}{a}}=-\arccos {\frac {x}{a}} $
-
-$ \int \cos x{\mbox{d}}x=\sin x $
-
-$ \int \sin x{\mbox{d}}x=-\cos x $
 
 $ \int \sec ^{2}x{\mbox{d}}x=\tan x $
 
@@ -133,33 +129,13 @@ $ \int \sec x{\mbox{d}}x=\ln {\left|\sec x+\tan x\right|} $
 
 $ \int \csc x{\mbox{d}}x=\ln {\left|\csc x-\cot x\right|}=\ln {\left|{\tan x-\sin x \over \sin x\tan x}\right|} $
 
-$ \int \sin ^{n}x{\mbox{d}}x=-{\frac {1}{n}}\sin ^{n-1}x\cos x+{\frac {n-1}{n}}\int \sin ^{n-2}x{\mbox{d}}x\quad $
-
-$ \int \sin ^{2}x{\mbox{d}}x={\frac {x}{2}}-{\frac {\sin {2x}}{4}} $
-
-$ \int \cos ^{n}x{\mbox{d}}x={\frac {1}{n}}\cos ^{n-1}x\sin x+{\frac {n-1}{n}}\int \cos ^{n-2}x{\mbox{d}}x\quad $
-
-$ \int \cos ^{2}x{\mbox{d}}x={\frac {x}{2}}+{\frac {\sin {2x}}{4}} $
-
-$ \int \tan ^{n}x{\mbox{d}}x={\frac {1}{n-1}}\tan ^{n-1}x-\int \tan ^{n-2}x{\mbox{d}}x\quad $
-
-$ \int \tan ^{2}x{\mbox{d}}x=\tan x-x $
-
-$ \int xe^{ax}{\mbox{d}}x={\frac {1}{a^{2}}}(ax-1)e^{ax} $
-
 $ \int x^{n}e^{ax}{\mbox{d}}x={\frac {1}{a}}x^{n}e^{ax}-{\frac {n}{a}}\int x^{n-1}e^{ax}{\mbox{d}}x $
-
-$ \int e^{ax}\sin bx{\mbox{d}}x={\frac {e^{ax}}{a^{2}+b^{2}}}(a\sin bx-b\cos bx) $
-
-$ \int e^{ax}\cos bx{\mbox{d}}x={\frac {e^{ax}}{a^{2}+b^{2}}}(a\cos bx+b\sin bx) $
-
-$ \int x^{n}\ln x{\mbox{d}}x={\frac {x^{n+1}}{(n+1)^{2}}}[(n+1)\ln x-1] $
-
-$ \int {\frac {1}{x\ln {x}}}{\mbox{d}}x=\ln {(\ln {x})} $
 
 $ \int _{-\infty }^{\infty }e^{-ax^{2}+bx+c}\,\mathrm{d}x={\sqrt {\frac {\pi }{a}}}\,e^{{\frac {b^{2}}{4a}}+c} $
 
-$ \iint \limits _{D}\left({\frac {\partial Q}{\partial x}}-{\frac {\partial P}{\partial y}}\right)\mathrm {d} x\mathrm {d} y=\oint _{L^{+}}(P\mathrm {d} x+Q\mathrm {d} y) $
+$ \iint_{D} f(x, y)\mathrm{d}x\mathrm{d}y=\iint_{\Delta}f(r\cos \varphi, r\sin\varphi){r}\mathrm{d}r\mathrm{d}\varphi$
+
+$ \iiint_{\Omega} f(x, y, z) \mathrm{d}x\mathrm{d}y\mathrm{d}z=\iiint_{\Omega_1}f(r\cos\theta\cdot\cos\varphi, r\sin\theta\cdot\cos\varphi, r\sin\varphi)\cdot r^2\cos\varphi\mathrm{d}r\mathrm{d}\varphi\mathrm{d}\theta$
 
 \section{Distribution}
 
@@ -196,7 +172,7 @@ Approximate Bin: $n$ large, $p$ small ($n \ge 50, np \le 5$)
 
 $N$ 个球，$m$ 个红球，不放回取出 $n$ 个，有 $k$ 红球。
 
-性质：$\mathbb{E}(X)=n\cdot\frac{m}{N}, \mathrm{Var}(X)=n\cdot \frac{m}{N}\left(1-\frac{m}{N}\right)\left(1-\frac{n-1}{N-1}\right)$
+$\mathbb{E}(X)=n\cdot\frac{m}{N}, \mathrm{Var}(X)=n\cdot \frac{m}{N}\left(1-\frac{m}{N}\right)\left(1-\frac{n-1}{N-1}\right)$
 
 \subsection{Uniform Distribution}
 
@@ -205,6 +181,8 @@ $N$ 个球，$m$ 个红球，不放回取出 $n$ 个，有 $k$ 红球。
 PDF：$f(x)=\frac{1}{r-l}$
 
 CDF：$f(x)=\frac{x-l}{r-l}$
+
+$\mathbb{E}(X)=\frac{a+b}{2}, \mathrm{Var}(X)=\frac{(b-a)^2}{12}$
 
 \subsection{Normal Distribution}
 
@@ -277,27 +255,100 @@ $F_X(x)=\lim_{y\to +\infty}F(x, y)$
 
 $f_X(x)=\int_{-\infty}^{+\infty}f(x, y)\mathrm{d}y$
 
-\subsection{Independence}
-
-$\mathbb{P}r\{X\in A, Y\in B\}=\mathbb{P}r\{X\in A\}\cdot\mathbb{P}r\{Y\in B\}$
-
-$\mathbb{P}r\left\{X_1 \in A_1, \ldots, X_n \in A_n\right\} = \prod \mathbb{P}r\{X_i \in A_i\}$
-
-$f_{XY}(x, y)=f_X(x)\cdot f_Y(y)$
-
-$F_{XY}(x, y)=F_X(x)\cdot F_Y(y)$
-
 \subsection{Sum of Random Variables}
 
 $X, Y$ independent, $Z=X+Y$
 
 $f_Z(z)=\int_{-\infty}^{+\infty}f_X(x)f_Y(z-x)\mathrm{d}x$
 
-convolution
+$X_i\sim \Gamma(\alpha_i, \lambda)\to \sum X_i\sim\Gamma(\sum\alpha_i, \lambda)$
 
-$X\sim \Gamma(\alpha, \lambda), Y\sim \Gamma(\beta, \lambda)\to X+Y\sim\Gamma(\alpha+\beta, \lambda)$
+$X_i\sim N(\mu_i,\sigma_i^2)\to \sum X_i\sim N(\sum\mu_i,\sum\sigma_i^2)$
 
-$X\sim N(\mu_1,\sigma_1^2), Y\sim N(\mu_2,\sigma_2^2)\to X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$
+\subsection{Order Statistics}
+
+$X_1, X_2, \cdots, X_n$ 独立，CDF 为 $F$，PDF 为 $f$.
+
+令 $U$ 为最大值，$V$ 为最小值。
+
+$F_U(u)=F^n(u), f_U(u)=nf(u)F^{n-1}(u)$ 
+
+$F_V(v)=1-\left(1-F(v)\right)^n, f_V(v)=nf(v)\left[1-F(v)\right]^{n-1}$
+
+$F_{UV}(u, v)=\begin{cases}
+	\left[F(u)\right]^n-\left[F(u)-F(v)\right]^{n}&u>v\\
+	\left[F(u)\right]^n&u\le v
+\end{cases}$
+
+$f_{UV}(u, v)=\begin{cases}
+	n(n-1)f(u)f(v)\left[F(u)-F(v)\right]^{n-2}&u> v\\
+	0&u\le v
+\end{cases}$
+
+\subsection{Covariance}
+
+$\mathbb{E}(g(X)\cdot h(Y))=\mathbb{E}(g(X))\cdot \mathbb{E}(h(Y))$
+
+$\mathrm{Cov}(X, Y)=\mathbb{E}((X-\mu_X)(Y-\mu_Y))=\mathbb{E}(XY)-\mathbb{E}(X)\mathbb{E}(Y)$
+
+$X, Y$ 独立 $\to$ $\mathrm{Cov}(X, Y)=0$，但反过来不行
+
+$\mathrm{Cov}$的线性性：
+
+$\mathrm{Cov}\left(a+\sum_{i=1}^{n}b_iX_i, c+\sum_{i=1}^{m}d_iY_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{m}b_id_j(X_i, Y_j)$
+
+$\mathrm{Var}\left(a+\sum_{i=1}^{n}b_iX_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}b_ib_j(X_i, Y_j)$
+
+Correlation coefficient: $\rho=\frac{\mathrm{Cov}(X, Y)}{\sqrt{\mathrm{Var}(X)\mathrm{Var}(Y)}}=\frac{\sigma_{XY}}{\sigma_X\sigma_Y}$
+
+柯西不等式：$-1\le\rho\le 1$，$\rho=\pm 1$ 当且仅当 $X, Y$ 线性相关
+
+\subsection{Sample Mean/Variance}
+
+$\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$
+
+$S^2=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_i-\overline{X}\right)^2$
+
+$\frac{1}{n-1}$ 的原因：为了对齐 $\sigma^2$，$\mathbb{E}(S^2)=\sigma^2$
+
+\subsection{Conditioning}
+
+$\mathbb{P}\mathrm{r}(E)=\int_{\mathbb{R}}\mathbb{P}\mathrm{r}(E\mid X=x)p(x)\mathrm{d}x$
+
+$\mathbb{E}(Y)=\mathbb{E}_X[\mathbb{E}_Y(Y\mid X)]$
+
+$\mathrm{Var}(Y\mid X)=\mathbb{E}(Y^2\mid X)-[\mathbb{E}(Y\mid X)]^2$
+
+$\mathrm{Var}(Y)=\mathrm{Var}[\mathbb{E}(Y\mid X)]+\mathbb{E}[\mathrm{Var}(Y\mid X)]$
+
+$T=\sum_{i=1}^{N}X_i$，$X, N$ 随机
+
+$Var(T)=(\mathbb{E}(X))^2\mathrm{Var}(N)+\mathbb{E}(N)\mathrm{Var}(X)$
+
+\subsection{Central Limit Theorem}
+
+\subsubsection{Inequalities}
+
+Markov's inequality: $\mathbb{P}\mathrm{r}\left\{X\ge t\right\}\le\frac{\mathbb{E}(X)}{t}$，要求是 $X\ge 0, t>0$
+
+Chebyshev's Inequality：$\mathbb{P}\mathrm{r}\{|X-\mathbb{E}(X)|\ge t\}\le\frac{\mathrm{Var}(X)}{t^2}$
+
+$\mathbb{P}\mathrm{r}\{|X-\mathbb{E}(X)|\ge k\sigma\}\le\frac{1}{k^2}$
+
+\subsubsection{Law of Large Numbers}
+
+$\overline{X}_n=\frac{1}{n}\sum_{i=1}^{n}X_i$
+
+Weak: $\lim_{n\to\infty}\mathbb{P}\mathrm{r}\left\{\left|\overline{X}_n-\mu\right|>\epsilon\right\}=0$
+
+Strong: $\mathbb{P}\mathrm{r}\left\{\lim_{n\to\infty}\overline{X}_n=\mu\right\}=1$
+
+\subsubsection{CLT}
+
+$S_n=\sum_{i=1}^{n}X_i$
+
+$\lim_{n\to\infty}\mathbb{P}\mathrm{r}\left\{\frac{S_n-n\mu}{\sigma\sqrt{n}}\right\}=\Phi(x)$
+
 
 %\section{单词表}
 %
