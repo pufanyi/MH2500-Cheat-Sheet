@@ -297,9 +297,9 @@ $X, Y$ 独立 $\to$ $\mathrm{Cov}(X, Y)=0$，但反过来不行
 
 $\mathrm{Cov}$的线性性：
 
-$\mathrm{Cov}\left(a+\sum_{i=1}^{n}b_iX_i, c+\sum_{i=1}^{m}d_iY_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{m}b_id_j(X_i, Y_j)$
+$\mathrm{Cov}\left(a+\sum_{i=1}^{n}b_iX_i, c+\sum_{i=1}^{m}d_iY_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{m}b_id_j\mathrm{Cov}(X_i, Y_j)$
 
-$\mathrm{Var}\left(a+\sum_{i=1}^{n}b_iX_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}b_ib_j(X_i, Y_j)$
+$\mathrm{Var}\left(a+\sum_{i=1}^{n}b_iX_i\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}b_ib_j\mathrm{Cov}(X_i, Y_j)$
 
 Correlation coefficient: $\rho=\frac{\mathrm{Cov}(X, Y)}{\sqrt{\mathrm{Var}(X)\mathrm{Var}(Y)}}=\frac{\sigma_{XY}}{\sigma_X\sigma_Y}$
 
@@ -349,7 +349,7 @@ Strong: $\mathbb{P}\mathrm{r}\left\{\lim_{n\to\infty}\overline{X}_n=\mu\right\}=
 
 $S_n=\sum_{i=1}^{n}X_i$
 
-$\lim_{n\to\infty}\mathbb{P}\mathrm{r}\left\{\frac{S_n-n\mu}{\sigma\sqrt{n}}\right\}=\Phi(x)$
+$\lim_{n\to\infty}\mathbb{P}\mathrm{r}\left\{\frac{S_n-n\mu}{\sigma\sqrt{n}}\le x\right\}=\Phi(x)$
 
 
 %\section{单词表}
